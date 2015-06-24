@@ -1,8 +1,13 @@
 class NoteController {
-  constructor($log) {
+  constructor(Notes) {
+    this.Notes = Notes;
+  }
+
+  delete(note) {
+    this.Notes.remove(note.id);
   }
 }
 
-NoteController.$inject = ['$log'];
+NoteController.$inject = ['Notes'];
 
 export {NoteController};

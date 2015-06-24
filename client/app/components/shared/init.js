@@ -1,9 +1,9 @@
 import angular from 'angular';
 
-import {Notes} from './factory';
+import {NotesFactory} from './factory';
 
 
 let sharedModule = angular.module('shared', [])
-.factory('Notes', Notes);
+.factory('Notes', NotesFactory);
 
 export {sharedModule};

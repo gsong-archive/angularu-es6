@@ -3,7 +3,7 @@ import _ from 'lodash';
 let count = 0;
 
 
-let Notes = () => {
+let NotesFactory = () => {
   const notes = [{content: 'ABC'}];
 
   let all = () => {
@@ -20,11 +20,16 @@ let Notes = () => {
     return note;
   };
 
+  let remove = (id) => {
+    _.remove(notes, {id});
+  };
+
   return {
     add,
     all,
-    get
+    get,
+    remove
   };
 };
 
-export {Notes};
+export {NotesFactory};
