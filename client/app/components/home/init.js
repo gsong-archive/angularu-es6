@@ -1,9 +1,9 @@
 import angular from 'angular';
 
-import {HomeComponent} from './component.js';
+import {homeComponent} from './component.js';
 
 
 let homeModule = angular.module('home', [])
-.directive('home', HomeComponent);
+.directive('home', homeComponent);
 
 export {homeModule};

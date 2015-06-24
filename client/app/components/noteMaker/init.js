@@ -1,9 +1,9 @@
 import angular from 'angular';
 
-import {NoteMakerComponent} from './component';
+import {noteMakerComponent} from './component';
 
 
 let noteMakerModule = angular.module('noteMaker', [])
-.directive('noteMaker', NoteMakerComponent);
+.directive('noteMaker', noteMakerComponent);
 
 export {noteMakerModule};

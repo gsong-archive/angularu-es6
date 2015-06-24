@@ -4,7 +4,7 @@ import './style.css';
 import template from './template.html';
 
 
-let NoteMakerComponent = function() {
+let noteMakerComponent = function() {
   return {
     restrict: 'E',
     template,
@@ -12,4 +12,4 @@ let NoteMakerComponent = function() {
   };
 };
 
-export {NoteMakerComponent};
+export {noteMakerComponent};

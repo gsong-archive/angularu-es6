@@ -1,9 +1,17 @@
 import angular from 'angular';
 
 import 'normalize.css';
-import {homeModule, noteMakerModule} from './components/components';
+import {
+  homeModule,
+  noteListModule,
+  noteMakerModule,
+  noteModule
+} from './components/components';
 
 
 angular.module('app', [
-  homeModule.name, noteMakerModule.name
+  homeModule.name,
+  noteListModule.name,
+  noteMakerModule.name,
+  noteModule.name
 ]);

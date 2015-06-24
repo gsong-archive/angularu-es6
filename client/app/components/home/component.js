@@ -4,7 +4,7 @@ import './style.css';
 import template from './template.html';
 
 
-let HomeComponent = function() {
+let homeComponent = function() {
   return {
     restrict: 'E',
     template,
@@ -12,4 +12,4 @@ let HomeComponent = function() {
   };
 };
 
-export {HomeComponent};
+export {homeComponent};

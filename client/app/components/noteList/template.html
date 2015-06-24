@@ -1,0 +1,10 @@
+<h2>Notes List</h2>
+
+<section>
+  <note ng-repeat="note in vm.notes" note-data="note"></note>
+</section>
+
+{{ noteListCtrl.notes }}
+<ul>
+  <li ng-repeat="note in vm.notes">{{ note.content }}</li>
+</ul>
