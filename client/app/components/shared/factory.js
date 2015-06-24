@@ -1,12 +1,22 @@
 import _ from 'lodash';
+import angular from 'angular';
 
 let count = 1;
 
 
-let NotesFactory = () => {
-  const notes = [{content: 'ABC', id: 1}];
+let NotesFactory = ($http) => {
+  let notes = [];
+  const api = 'http://localhost:3100/notes';
 
   let all = () => {
+    return $http.get(api)
+    .then(({data}) => {
+      angular.copy(data, notes);
+    });
+  };
+
+  let getState = () => {
+    all();
     return notes;
   };
 
@@ -15,9 +25,10 @@ let NotesFactory = () => {
   };
 
   let add = (content) => {
-    let note = {content, id: ++count};
-    notes.push(note);
-    return note;
+    $http.post(api, {content, id: ++count})
+    .then(({data}) => {
+      all();
+    });
   };
 
   let remove = (id) => {
@@ -28,6 +39,7 @@ let NotesFactory = () => {
     add,
     all,
     get,
+    getState,
     remove
   };
 };
