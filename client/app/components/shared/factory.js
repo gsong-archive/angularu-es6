@@ -3,7 +3,7 @@ import _ from 'lodash';
 let count = 0;
 
 
-let NoteList = () => {
+let Notes = () => {
   const notes = [{content: 'ABC'}];
 
   let all = () => {
@@ -27,4 +27,4 @@ let NoteList = () => {
   };
 };
 
-export {NoteList};
+export {Notes};

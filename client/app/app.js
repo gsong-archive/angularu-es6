@@ -5,7 +5,8 @@ import {
   homeModule,
   noteListModule,
   noteMakerModule,
-  noteModule
+  noteModule,
+  sharedModule
 } from './components/components';
 
 
@@ -13,5 +14,6 @@ angular.module('app', [
   homeModule.name,
   noteListModule.name,
   noteMakerModule.name,
-  noteModule.name
+  noteModule.name,
+  sharedModule.name
 ]);

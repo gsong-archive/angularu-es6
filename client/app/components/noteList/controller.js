@@ -1,22 +1,22 @@
 class NoteListController {
-  constructor(NoteList) {
-    this.NoteList = NoteList;
+  constructor(Notes) {
+    this.Notes = Notes;
     this.notes = this.getAll();
   }
 
   add(content) {
-    return this.NoteList.add(content);
+    return this.Notes.add(content);
   }
 
   get(id) {
-    return this.NoteList.get(id);
+    return this.Notes.get(id);
   }
 
   getAll() {
-    return this.NoteList.all();
+    return this.Notes.all();
   }
 }
 
-NoteListController.$inject = ['NoteList'];
+NoteListController.$inject = ['Notes'];
 
 export {NoteListController};
