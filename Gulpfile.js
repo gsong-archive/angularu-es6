@@ -5,7 +5,7 @@ var webpack = require('gulp-webpack');
 
 
 var paths = {
-  app: ['client/app/**/*.js']
+  app: ['client/app/**/*.{js,css,html}']
 };
 
 gulp.task('build', function() {
