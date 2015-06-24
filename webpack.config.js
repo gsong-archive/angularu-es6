@@ -6,7 +6,9 @@ module.exports = {
 
   module: {
     loaders: [
-      {test: /\.js$/, loader: 'babel', excludes: [/\.node_modules/]}
+      {test: /\.js$/, loader: 'babel', excludes: [/\.node_modules/]},
+      {test: /\.html$/, loader: 'raw'},
+      {test: /\.css$/, loader: 'style!css'}
     ]
   }
 };
