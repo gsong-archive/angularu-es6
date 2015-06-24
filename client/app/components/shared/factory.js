@@ -26,13 +26,12 @@ let NotesFactory = ($http) => {
 
   let add = (content) => {
     $http.post(api, {content, id: ++count})
-    .then(({data}) => {
-      all();
-    });
+    .then(({data}) => all());
   };
 
   let remove = (id) => {
-    _.remove(notes, {id});
+    $http.delete(api + '/' + id)
+    .then(() => all());
   };
 
   return {
