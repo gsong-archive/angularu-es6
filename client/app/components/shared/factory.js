@@ -1,10 +1,10 @@
 import _ from 'lodash';
 
-let count = 0;
+let count = 1;
 
 
 let NotesFactory = () => {
-  const notes = [{content: 'ABC'}];
+  const notes = [{content: 'ABC', id: 1}];
 
   let all = () => {
     return notes;

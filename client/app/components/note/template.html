@@ -1,4 +1,8 @@
-<div>
-  {{ vm.noteData.content }}
-  <button ng-click="vm.delete(vm.noteData)">delete</button>
+<div class="col-xs-6 col-md-4">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      {{ vm.noteData.content }}
+      <button ng-click="vm.delete(vm.noteData)" class="btn btn-link">delete</button>
+    </div>
+  </div>
 </div>

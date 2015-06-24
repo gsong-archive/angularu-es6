@@ -1,8 +1,10 @@
 <div class="note-maker">
   <div>
-    <form>
+    <form ng-submit="vm.addNote(vm.note)">
       <input type="text" placeholder="Add note" ng-model="vm.note">
-      <button ng-click="vm.addNote(vm.note)">Create</button>
+      <button class="btn btn-primary" type="submit">
+        Create
+      </button>
     </form>
   </div>
 </div>
